@@ -28,16 +28,13 @@ jobs:
         java-version: 11
       
     - name: Spring boot build native image
-      run: mvn spring-boot:build-image
+      run: mvn spring-boot:build-image -Dspring-boot.build-image.imageName=nortthon/spring-native-start:latest
       
     - name: Login to DockerHub
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    
-    - name: Tag image
-      run: docker image tag spring-native-start nortthon/spring-native-start:latest
       
     - name: Push Images
       run: docker image push --all-tags nortthon/spring-native-start
