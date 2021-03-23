@@ -1,0 +1,17 @@
+server:
+  shutdown: graceful
+
+spring:
+  application:
+    name: spring-native-start
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
