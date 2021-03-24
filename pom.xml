@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.nortthon</groupId>
 	<artifactId>spring-native-start</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>spring-native-start</name>
 
 	<parent>
@@ -65,7 +65,7 @@
 					</excludes>
 					<image>
 						<builder>paketobuildpacks/builder:tiny</builder>
-						<name>nortthon/${project.artifactId}</name>
+						<name>nortthon/${project.artifactId}:${project.version}</name>
 						<env>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 						</env>
