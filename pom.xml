@@ -65,6 +65,7 @@
 					</excludes>
 					<image>
 						<builder>paketobuildpacks/builder:tiny</builder>
+						<name>nortthon/${project.artifactId}</name>
 						<env>
 							<BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
 						</env>
